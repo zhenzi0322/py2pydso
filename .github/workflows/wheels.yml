@@ -59,7 +59,7 @@ jobs:
       # 执行自研构建脚本 --keep-tmp 异常时保留临时目录
       - name: Build protected wheel (keep tmp for debug)
         working-directory: demo
-        run: python build_protected.py --package-name py2pydso --output-dir ../wheelhouse --skip-stubgen --keep-tmp
+        run: python build_protected.py package --package-name py2pydso --output-dir ../wheelhouse --skip-stubgen --keep-tmp
 
       # 跨平台打印wheel列表
       - name: Print all built wheels in wheelhouse
